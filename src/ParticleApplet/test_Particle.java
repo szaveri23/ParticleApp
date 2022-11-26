@@ -10,8 +10,8 @@ import org.junit.Test;
 public class test_Particle implements MouseMotionListener {
 
 	int x = 5, y = 1;
-	Particle q = new Particle(0, 0);
-	Particle p = new Particle(1, 1);
+	Particle q = new Particle(1, 1);
+	Particle p = new Particle(2, 2);
 
 	Particle[] qc1 = { q, p };
 
@@ -24,8 +24,8 @@ public class test_Particle implements MouseMotionListener {
 	
 	@Test
 	public void test1(){
-	      Particle q = new Particle(0, 0);
-	      Particle p = new Particle(1, 1);
+	      Particle q = new Particle(1, 1);
+	      Particle p = new Particle(2, 2);
 	      assertNotEquals(p, q);
 	  }
 	
