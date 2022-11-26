@@ -100,7 +100,7 @@ class ParticleCanvas extends Canvas {
 }
 
 @SuppressWarnings("serial")
-class ParticleApplet extends Frame {
+class ParticleApp extends Frame {
 
 	protected Thread[] threads; // null when not running
 
