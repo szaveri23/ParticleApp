@@ -9,11 +9,10 @@ import org.junit.Test;
 public class test_Particle implements MouseMotionListener {
 	
 	//Testing variables
-	int x = 5, y = 1;
+	int x = 5;
+	int y = 1;
 	Particle q = new Particle(1, 1);
 	Particle p = new Particle(2, 2);
-
-	Particle[] qc1 = { q, p };
 
 	//Test the constructor
 	//Test if initalX and initialY of a Particle are correctly defined.
@@ -42,12 +41,7 @@ public class test_Particle implements MouseMotionListener {
 		assertNotEquals(y, sample.y);
 	}
 	
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-	
-	//Test the mouse functions.
+	// Test the mouse functions.
 	
 	//Test the mouseDragged() method
 	//Test if the mouse has been dragged

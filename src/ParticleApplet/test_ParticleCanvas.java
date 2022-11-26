@@ -1,12 +1,18 @@
 package ParticleApplet;
 
-import static org.junit.Assert.*; 
+import static org.junit.Assert.*;
+
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+
 import org.junit.Test;
 
-public class test_ParticleCanvas {
+public class test_ParticleCanvas implements MouseMotionListener{
 	//Testing variables
 	int d1 = 100;
 	int d2 = 100;
+	int x = 5;
+	int y = 1;
 	ParticleCanvas test = new ParticleCanvas(111);
 	Particle[] p = {new Particle(d1,d2)};
 	Particle[] w = {new Particle(d1, d2)};
@@ -45,9 +51,27 @@ public class test_ParticleCanvas {
 		assertNotEquals(v, w);
 	}
 	
-	@Test
-	public void test() {
-		fail("Not yet implemented");
+	//Test the mouse functions.
+	
+	//Test the mouseDragged() method
+	//Test if the mouse has been dragged
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
+		x = e.getX();
+		y = e.getY();
+		assertNotEquals(x, e.getX());
+		assertNotEquals(y, e.getY());
 	}
-
+	
+	//Test the mouseMoved() method
+	//move the mouse and see if the values have changed.
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		x = e.getX();
+		y = e.getY();
+		assertNotEquals(x, e.getX());
+		assertNotEquals(y, e.getY());
+	}
 }
